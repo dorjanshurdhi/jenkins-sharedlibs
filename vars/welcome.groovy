@@ -3,6 +3,7 @@ def call(name){
      echo "Hey you are ${name} Disummo?"
   } 
   else {
-     echo "I don't know you"
+    error="I don't know you"
+    log.error(error)
   }
 }
