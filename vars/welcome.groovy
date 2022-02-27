@@ -1,3 +1,8 @@
 def call(name){
-  echo "Hey ${name}, How are you?"
+  if( ${name} == "Vincenzo"){
+     echo "Hey yua are ${name} Disummo?"
+  } 
+  else {
+     echo "I don't know you"
+  }
 }
