@@ -9,6 +9,7 @@ def loadColors(){
   BIPurple='\033[1;95m'
   BICyan='\033[1;96m'
   BIWhite='\033[1;97m'
+  Blink='\033[5m'
 }
 
 def info(message){
@@ -18,15 +19,21 @@ def info(message){
 
 def error(message){
   loadColors()
-  sh """ set +x; echo -e "${BIRed}[INFO] - $message  ${NC}" """
+  sh """ set +x; echo -e "${BIRed}[ERROR] - $message  ${NC}" """
 }
 
 def success(message){
   loadColors()
-  sh """ set +x; echo -e "${BIGreen}[INFO] - $message  ${NC}" """
+  
+  sh """ set +x; echo -e "${BIGreen}[SUCCESS] - blinkSucces($message)  ${NC}" """
 }
 
 def debug(message){
   loadColors()
-  sh """ set +x; echo -e "${BIBlue}[INFO] - $message  ${NC}" """
+  sh """ set +x; echo -e "${BIBlue}[DEBUG] - $message  ${NC}" """
+}
+
+def blinkSuccess(message){
+  loadColors()
+  sh """ echo -e "${Blink} $message  ${NC}" """
 }
