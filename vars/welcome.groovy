@@ -7,6 +7,7 @@ def call(name){
       ansiColor('xterm'){
         error="I don't know you"
         log.error(error)
+      }
     }
   }
 }
