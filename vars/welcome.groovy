@@ -3,7 +3,10 @@ def call(name){
      echo "Hey you are ${name} Disummo?"
   } 
   else {
-    error="I don't know you"
-    log.error(error)
+    timestamps{
+      ansiColor('xterm'){
+        error="I don't know you"
+        log.error(error)
+    }
   }
 }
