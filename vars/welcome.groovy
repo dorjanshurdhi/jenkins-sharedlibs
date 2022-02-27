@@ -1,5 +1,5 @@
 def call(name){
-  if( ${name} == "Vincenzo"){
+  if( name == "Vincenzo"){
      echo "Hey yua are ${name} Disummo?"
   } 
   else {
