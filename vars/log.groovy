@@ -25,7 +25,7 @@ def error(message){
 def success(message){
   loadColors()
   
-  sh """ set +x; echo -e "${BIGreen}[SUCCESS] - blinkSucces($message)  ${NC}" """
+  sh """ set +x; echo -e "${BIGreen}[SUCCESS] - blinkSuccess($message)  ${NC}" """
 }
 
 def debug(message){
