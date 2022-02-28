@@ -4,5 +4,4 @@ def showFile(file){
            sh cat file
          } 
       }
-    }
 }
